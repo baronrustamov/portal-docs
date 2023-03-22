@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "start": "next start",
-    "export": "next build && next export",
+    "start": "next --openssl-legacy-provider start",
+    "export": "next --openssl-legacy-provider build && next export",
     "dev": "PORT=4000 next dev",
-    "build": "next build",
+    "build": "next  --openssl-legacy-provider build",
     "postbuild": "next-sitemap",
     "format": "prettier '{src,remark,scripts}/**/*.{css,js,mdx}' --write",
     "dev:node-middleware": "node server.js"
