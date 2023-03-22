@@ -6,7 +6,7 @@ RUN npm i -g n
 RUN n latest
 RUN npm i -f next react-scripts
 RUN npm install -f
-ENV NODE_OPTIONS -openssl-legacy-provider
+ENV NODE_OPTIONS openssl-legacy-provider
 RUN npm run build
 ENV NEXT_TELEMETRY_DISABLED 1
 ENV NODE_ENV production
