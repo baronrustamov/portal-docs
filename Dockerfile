@@ -4,6 +4,7 @@ WORKDIR /app
 RUN git clone https://github.com/baronrustamov/portal-docs .
 RUN npm i -f next 
 RUN npm install -f
+ENV NODE_OPTIONS openssl-legacy-provider
 RUN npm run build
 ENV NEXT_TELEMETRY_DISABLED 1
 ENV NODE_ENV production
